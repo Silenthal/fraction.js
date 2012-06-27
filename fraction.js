@@ -84,7 +84,7 @@ Fraction = function(numerator, denominator)
             this.denominator = parseInt(denominator);
         }
     /* single-argument invocation */
-    } else if (!denominator) {
+    } else if (!denominator || numerator === 0) {
         num = numerator; // swap variable names for legibility
         if (typeof(num) === 'number') {  // just a straight number init
             this.numerator = num;
