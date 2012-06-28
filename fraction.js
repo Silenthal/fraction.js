@@ -140,6 +140,14 @@ Fraction.prototype.toString = function()
     return result.length > 0 ? result.join(' ') : 0;
 }
 
+/**
+ * Returns the fraction in its floating point representation. 
+ */
+Fraction.prototype.toFloat = function()
+{
+    return parseFloat(this.numerator / this.denominator);
+}
+
 
 /* destructively rescale the fraction by some integral factor */
 Fraction.prototype.rescale = function(factor)
